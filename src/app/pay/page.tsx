@@ -37,7 +37,7 @@ async function PaymentDetails({ searchParams }: PayPageProps) {
           </div>
         )}
       </dl>
-      <WalletConnection />
+      <WalletConnection key={JSON.stringify(request)} recipient={request.recipient} amount={request.amount} />
     </>
   );
 }
